@@ -1,0 +1,119 @@
+//shows the student status, Nd,Hnd etc.
+ Route::get('/stat', [App\Http\Controllers\yababController::class, 'stat'])->name('stattest');
+
+
+//this shows the basic information on the web.
+Route::get('/basikinfo', [App\Http\Controllers\yababController::class, 'basikinfo']);
+
+//Displays scrolling image information.
+    Route::get('/scrollingtext', [App\Http\Controllers\yababController::class, 'scrollingtext']);
+
+   //Display quick link information.
+    Route::get('/quicklink', [App\Http\Controllers\yababController::class, 'quicklink']);
+
+//Create payment type.
+    Route::get('/createpay', [App\Http\Controllers\yababController::class, 'createpay']);
+
+//Display management information.
+    Route::get('/manage', [App\Http\Controllers\yababController::class, 'manage']);
+
+//Display admin details.
+    Route::get('/newadmin', [App\Http\Controllers\yababController::class, 'newadmin']);
+
+//Display created academic units.
+    Route::get('/acad', [App\Http\Controllers\schservController::class,'acad']);
+
+//Display registry created units.
+    Route::get('/reg', [App\Http\Controllers\schservController::class,'reg']);
+
+//Display bursary  created units.
+    Route::get('/bur', [App\Http\Controllers\schservController::class,'bur']);
+    
+
+//Display created schools.
+    Route::get('/managesch', [App\Http\Controllers\schservController::class, 'managesch']);
+
+
+//Display added staff per school and department.
+    Route::get('/addedstaff/{id}/{skolid}', [App\Http\Controllers\schservController::class,'addedstaff']);
+
+
+//Display created programmes per dept and skool id 
+    Route::get('/newprog/{id}/{skolid}', [App\Http\Controllers\schservController::class,'newprog']);
+
+//Display created program status per school and dept.
+    Route::get('/addviewprog/{id}/{skolid}/{deptid}', [App\Http\Controllers\schservController::class,'addviewprog']);
+
+
+//Display created service unit 
+    Route::get('/serv', [App\Http\Controllers\schservController::class,'serv']);
+
+
+//Display created service profile per id.
+    Route::get('/servprofile/{id}', [App\Http\Controllers\schservController::class,'servprofile']);
+
+//Display created service staff per id.
+  Route::get('/viewservstaff/{id}', [App\Http\Controllers\schservController::class,'viewservstaff']);
+
+
+//Display created academic profile per id.
+    Route::get('/acadprofile/{id}', [App\Http\Controllers\schservController::class,'acadprofile']);
+
+//Display academic  staff per id.
+    Route::get('/viewacadstaff/{id}', [App\Http\Controllers\schservController::class,'viewacadstaff']);
+
+
+//Display registry profile per id.
+    Route::get('/regprofile/{id}', [App\Http\Controllers\schservController::class,'regprofile']);
+
+//Display registry  staff per id.
+    Route::get('/viewregstaff/{id}', [App\Http\Controllers\schservController::class,'viewregstaff']);
+
+//Display bursary details per id.
+    Route::get('/burdet/{id}', [App\Http\Controllers\schservController::class,'burdet']);
+
+//Display bursary staff per id.
+   Route::get('/viewburstaff/{id}', [App\Http\Controllers\schservController::class,'viewburstaff']);
+
+//Display library .
+   Route::get('/lib', [App\Http\Controllers\schservController::class,'lib']);
+
+//Display library unit detail  per id.
+   Route::get('/libdet/{id}', [App\Http\Controllers\schservController::class,'libdet']);
+
+
+//Display library staff  per id.
+   Route::get('/viewlibstaff/{id}', [App\Http\Controllers\schservController::class,'viewlibstaff']);
+
+//Display staff .
+   Route::get('/staffpro', [App\Http\Controllers\schservController::class,'staffpro']);
+
+//Display knowledge  base.
+   Route::get('/know', [App\Http\Controllers\schservController::class,'know']);
+
+//Display knowledge  base details per id.
+   Route::get('/knowdet/{id}', [App\Http\Controllers\schservController::class,'knowdet']);
+
+//Display news details  per id.
+Route::get('/newsdet/{id}',[App\Http\Controllers\schservController::class,'newsdet']);
+
+//Display news.
+Route::get('/viewnews', [App\Http\Controllers\schservController::class,'viewnews']);
+
+//Display events by descending order
+Route::get('/addevent', [App\Http\Controllers\schservController::class,'addevent']);
+
+
+//Display events by id
+Route::get('/eventdet/{id}',[App\Http\Controllers\schservController::class,'eventdet']);
+
+//Display alumni
+Route::get('/addalum', [App\Http\Controllers\schservController::class,'addalum']);
+
+
+//Display alumni details by id
+Route::get('/alumdet/{id}',[App\Http\Controllers\schservController::class,'alumdet']);
+
+
+Route::get('/viewalum', [App\Http\Controllers\schservController::class,'viewalum']);
+
